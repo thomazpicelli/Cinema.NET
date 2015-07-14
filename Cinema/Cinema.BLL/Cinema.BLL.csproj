@@ -42,10 +42,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Cinema.BOL\Cinema.BOL.csproj">
-      <Project>{06ad1d27-5e8b-42e2-80c0-d19e8dda540d}</Project>
-      <Name>Cinema.BOL</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Cinema.DAL\Cinema.DAL.csproj">
       <Project>{a63c4a62-6cde-4f56-b2a4-7aa0ffce291d}</Project>
       <Name>Cinema.DAL</Name>
