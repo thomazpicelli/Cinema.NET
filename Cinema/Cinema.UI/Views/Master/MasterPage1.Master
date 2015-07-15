@@ -9,15 +9,21 @@
         <asp:ContentPlaceHolder ID="Head" runat="server"/>
         <%: Styles.Render("~/Content/css") %>
         <%: Scripts.Render("~/bundles/modernizr") %>
+        <link href="~/Content/bootstrap.min.css" rel="stylesheet"/>
     </head>
     <body>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+
         <header>
             <div class="content-wrapper">
                 <section id="login">
                     <%: Html.Partial("_LoginPartial") %>
                 </section>
-                <nav>
-                    <ul id="menu">
+                <nav class="dropdown-menu-left">
+                    <ul class="nav nav-tabs">
                         <li><%: Html.ActionLink("Home", "Index", "Home") %></li>
                         <li><%: Html.ActionLink("About", "About", "Home") %></li>
                         <li><%: Html.ActionLink("Contact", "Contact", "Home") %></li>
