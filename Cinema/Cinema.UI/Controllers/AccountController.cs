@@ -20,5 +20,10 @@ namespace Cinema.UI.Controllers
         {
             return View();
         }
+
+        public ActionResult ForgotPassword() 
+        {
+            return View();
+        }
     }
 }
