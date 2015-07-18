@@ -12,13 +12,13 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <div class="container">
-        <div class="mainbox col-md-5 col-md-offset-2">
+    <div class="active">
+        <div class="mainbox col-md-7 col-md-offset-2">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <div class="panel-title" style="color:#0db020; font-size:large">Sign In</div>
                     <div style="float: right; font-size: 80%; position: relative; top: -10px">
-                        <a href="#">Forgot password?</a>
+                        <%: Html.ActionLink("Forgot Password?", "ForgotPassword", "Account")%>
                     </div>
                 </div>
                 <div class="panel-body">
@@ -51,4 +51,5 @@
             </div>
         </div>
     </div>
+        </div>
 </asp:Content>

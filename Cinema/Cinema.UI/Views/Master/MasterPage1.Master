@@ -5,7 +5,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
         <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
-        <link href="<%: Url.Content("~/favicon.ico") %>" rel="shortcut icon" type="image/x-icon" />
+        <link href="<%: Url.Content("~/Images/orderedList9.png") %>" rel="shortcut icon" type="image/x-icon" />
         <asp:ContentPlaceHolder ID="Head" runat="server"/>
         <%: Styles.Render("~/Content/css") %>
         <%: Scripts.Render("~/bundles/modernizr") %>
@@ -19,9 +19,9 @@
 
         <header>
             <div class="content-wrapper">
-                <section id="login">
+                <div id="login">
                     <%: Html.Partial("_LoginPartial") %>
-                </section>
+                </div>
                 <nav class="dropdown-menu-left">
                     <ul class="nav nav-tabs">
                         <li><%: Html.ActionLink("Home", "Index", "Home") %></li>
@@ -36,7 +36,7 @@
             <asp:ContentPlaceHolder ID="MainContent" runat="server" />
         </section>
         <footer>
-            <div class="content-wrapper">
+            <div class="content-wrapper" style="padding-top:1%;">
                 <div class="float-left">
                     <p>&copy; <%: DateTime.Now.Year %> - Cinema ASP.NET MVC Application</p>
                 </div>
