@@ -16,40 +16,39 @@
         <div class="mainbox col-md-7 col-md-offset-2">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <div class="panel-title" style="color:#0db020; font-size:large">Sign In</div>
+                    <div class="panel-title" style="color:#0db020; font-size:large">
+                        <p>Sign In</p>
+                    </div>
                     <div style="float: right; font-size: 80%; position: relative; top: -10px">
-                        <%: Html.ActionLink("Forgot Password?", "ForgotPassword", "Account")%>
+                        <%= Html.ActionLink("Forgot Password?", "ForgotPassword", "Account")%>
                     </div>
                 </div>
                 <div class="panel-body">
                     <div style="display: none" id="login-alert" class="alert alert-danger col-sm-12">
                         <p>Login Inválido!</p>
                     </div>
-                    <form id="loginform" method="post" runat="server" class="form-horizontal" role="form" style="padding:5%;">
+                    <% using (@Html.BeginForm("Login", "Account", FormMethod.Post, new { enctype = "multipart/form-data" })){%>
                         <div class="input-group" style="margin-left:5%; margin-bottom: 5%;">
-                            <input type="text" class="input-lg" "login-username" placeholder="Username" />
+                            <%= @Html.TextBox("txtLogin", "", new { placeholder = "Username", @class="input-lg" }) %>
+                            <%= @Html.ValidationMessage("txtLogin", "*") %>
                         </div>
                         <div class="input-group" style="margin-left:5%; margin-bottom: 5%;">
-                            <input type="password" class="input-lg" name="login-password" placeholder="Password" />
+                            <%= @Html.TextBox("txtPassword", "", new { placeholder = "Password", @class="input-lg" }) %>
+                            <%= Html.ValidationMessage("txPassword", "*") %>
                         </div>
                         <hr/>
                         <div class="input-group">
                             <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="login-remember" value="1"/>
-                                    Remember me
-                                </label>
+                                <%= Html.CheckBox("cbxRemeber", false)%>
+                                <label for="cbxRemeber" style="display:inline;">Remember me</label>
                             </div>
                         </div>
-                        <div style="margin-top: 10px" class="form-group">
-                            <div class="col-sm-12 controls">
-                                <a id="btn-login" href="#" class="btn btn-success btn-lg">Login</a>
-                            </div>
+                        <div style="margin-top:2%;">
+                            <button name="x" class="btn btn-success btn-lg">Login</button>
                         </div>
-                    </form>
+                    <%}%>
                 </div>
             </div>
         </div>
     </div>
-        </div>
 </asp:Content>

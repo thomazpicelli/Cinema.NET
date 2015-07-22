@@ -35,14 +35,11 @@
         <section class="content-wrapper main-content clear-fix">
             <asp:ContentPlaceHolder ID="MainContent" runat="server" />
         </section>
-        <footer>
-            <div class="content-wrapper" style="padding-top:1%;">
-                <div class="float-left">
-                    <p>&copy; <%: DateTime.Now.Year %> - Cinema ASP.NET MVC Application</p>
-                </div>
+        <footer class="footer">
+            <div class="container" style="padding-top:1%;">
+                <p class="text-muted credit">&copy; <%: DateTime.Now.Year %> - Cinema ASP.NET MVC Application</p>
             </div>
         </footer>
-
         <%: Scripts.Render("~/bundles/jquery") %>
         <asp:ContentPlaceHolder ID="ScriptsSection" runat="server" />
     </body>

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.UI.WebControls;
+using Cinema.UI.Models;
 
 namespace Cinema.UI.Controllers
 {
@@ -10,8 +12,14 @@ namespace Cinema.UI.Controllers
     {
         //
         // GET: /Account/
-
+        [HttpGet]
         public ActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Login(Usuario usuario)
         {
             return View();
         }
