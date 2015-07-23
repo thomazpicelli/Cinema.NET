@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>@ViewBag.Title</title>
+        <link href="@Url.Content("~/Images/orderedList9.png")" rel="shortcut icon" type="image/x-icon" />
+        ><link href="@Url.Content("~/Content/bootstrap.min.css")" rel="stylesheet" />
+        @Scripts.Render("~/bundles/modernizr")
+        @Styles.Render("~/Content/css")
+        @RenderSection("Head", true)
+    </head>
+    <body>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+
+        <header>
+            <div class="content-wrapper">
+                <div id="login">
+                    @Html.Partial("_LoginPartial")
+                </div>
+                <nav class="dropdown-menu-left">
+                    <ul class="nav nav-tabs">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    </ul>
+                </nav>
+            </div>
+            @RenderSection("Header", true)
+        </header>
+        <section class="content-wrapper main-content clear-fix">
+            @RenderBody()
+        </section>
+        <footer class="footer">
+            <div class="container" style="padding-top:1%;">
+                <p style="font-size:8pt;" class="text-muted credit">&copy; @DateTime.Now.Year - Cinema ASP.NET MVC Application</p>
+            </div>
+        </footer>
+        @Scripts.Render("~/bundles/jquery")
+        @RenderSection("Script", true)
+    </body>
+</html>
